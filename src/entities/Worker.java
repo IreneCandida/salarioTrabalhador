@@ -16,14 +16,16 @@ public class Worker {
 		
 	public Worker() {
 	}
-
-	public Worker(String name, Double baseSalary, WorkerLevel level, Departament departament) {
+	
+	public Worker(String name, WorkerLevel level, Double baseSalary,Departament departament) {
 		this.name = name;
 		this.baseSalary = baseSalary;
 		this.level = level;
 		this.departament = departament;
 	}
-	
+
+
+
 	public String getName() {
 		return name;
 	}
