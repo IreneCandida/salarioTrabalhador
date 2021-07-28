@@ -5,11 +5,10 @@ import java.util.Date;
 public class HourContract {
 	
 	private Date date;
-	private double valuePerHour;
+	private Double valuePerHour;
 	private Integer hours;
 		
 	public HourContract() {
-		
 	}
 
 	public HourContract(Date date, double valuePerHour, Integer hours) {
@@ -43,8 +42,6 @@ public class HourContract {
 	}
 	
 	public double totalValue() {
-		double value = 0.0;
-		return value;
-	}
-		
+		return valuePerHour * hours;
+	}		
 }
