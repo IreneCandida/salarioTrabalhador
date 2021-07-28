@@ -5,7 +5,6 @@ public class Departament {
 	private String name;
 	
 	public Departament() {
-	
 	}
 
 	public Departament(String name) {
@@ -18,6 +17,5 @@ public class Departament {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-	
+	}	
 }
