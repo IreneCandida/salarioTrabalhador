@@ -19,29 +19,30 @@ public class Program {
 		
 		System.out.print("Enter department's name: ");
 		String departamentName = sc.nextLine();
-		System.out.print("Enter worker data:");
+		System.out.println("Enter worker data:");
 		System.out.print("Name: ");
 		String workerName = sc.nextLine();
 		System.out.print("Level: ");
 		String workerLevel = sc.nextLine();
 		System.out.print("Base salary: ");
 		double baseSalary = sc.nextDouble();
-		
 		Worker worker = new Worker(workerName,WorkerLevel.valueOf(workerLevel), baseSalary, new Departament (departamentName));
+		
 		System.out.println("How namy contracts to this worker? ");
 		int numContract = sc.nextInt();
 				
 		for (int i = 1; i <= numContract; i++) {
-			System.out.printf("Enter contract # " + i + " data: ");
-			System.out.println("Date (DD/MM/YYYY");
+			System.out.println("Enter contract # " + i + " data: ");
+			System.out.print("Date (DD/MM/YYYY");
 			Date contractDate = sdf.parse(sc.next());
-			System.out.println("Value per hour: ");
-			double valuePorHour = sc.nextDouble();
-			System.out.println("Duration (hours): ");
+			System.out.print("Value per hour: ");
+			double valuePerHour = sc.nextDouble();
+			System.out.print("Duration (hours): ");
 			int hoursDuration = sc.nextInt();
 			
-			HourContract contract = new HourContract(contractDate, valuePorHour, hoursDuration);
+			HourContract contract = new HourContract(contractDate, valuePerHour, hoursDuration);
 			worker.addContract(contract);
+			System.out.println(contract);
 		}
 		System.out.println();
 		System.out.println("Enter month and year to clculate income (MM/YYYY): ");
